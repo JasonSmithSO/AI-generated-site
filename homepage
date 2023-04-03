@@ -17,9 +17,8 @@
 		</div>
 
 		<div class="movie">
-			<img src="poster2.jpg">
-			<h3 style="font-family: Roboto">Movie Title 2</h3>
-			<button onclick="playNow()" style="font-family: Roboto">Play Now</button>
+			<h3 style="font-family: Roboto">Extraction 2</h3>
+			<button on click="window.location.href='https://youtu.be/mO0OuR26IZM'" style="font-family: Roboto">Play Now</button>			
 			<button onclick="addToWatchlist()" style="font-family: Roboto">Add to Watchlist</button>
 		</div>
 
