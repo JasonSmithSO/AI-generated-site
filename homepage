@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Netflix-like Homepage</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+	<h1 style="font-family: Roboto">Netflix-like Homepage</h1>
+
+	<h2 style="font-family: Roboto">Popular Movies</h2>
+	<div id="popular-movies">
+		<div class="movie">
+			<img img="https://postimg.cc/1nn82WDC">
+			<h3 style="font-family: Roboto">Secret Invasion</h3>
+			<button onclick="window.location.href='https://disney-clone-27181900.hubspotpagebuilder.eu/title?hs_preview=VFEmDQXl-65018161627&'" style="font-family: Roboto">Play Now</button>
+			<button onclick="addToWatchlist()" style="font-family: Roboto">Add to Watchlist</button>
+		</div>
+
+		<div class="movie">
+			<img src="poster2.jpg">
+			<h3 style="font-family: Roboto">Movie Title 2</h3>
+			<button onclick="playNow()" style="font-family: Roboto">Play Now</button>
+			<button onclick="addToWatchlist()" style="font-family: Roboto">Add to Watchlist</button>
+		</div>
+
+		<div class="movie">
+			<img src="poster3.jpg">
+			<h3 style="font-family: Roboto">Movie Title 3</h3>
+			<button onclick="playNow()" style="font-family: Roboto">Play Now</button>
+			<button onclick="addToWatchlist()" style="font-family: Roboto">Add to Watchlist</button>
+		</div>
+	</div>
+
+	<h2 style="font-family: Roboto">New Releases</h2>
+	<div id="new-releases">
+        <div class="movie">
+            <img src="poster4.jpg">
+            <h3 style="font-family: Roboto">Movie Title 4</h3>
+            <button onclick="playNow()" style="font-family: Roboto">Play Now</button>
+            <button onclick="addToWatchlist()" style="font-family: Roboto">Add to Watchlist</button>
+        </div>
+
+        <div class="movie">
+            <img src="poster5.jpg">
+            <h3 style="font-family: Roboto">Movie Title 5</h3>
+            <button onclick="playNow()" style="font-family: Roboto">Play Now</button>
+            <button onclick="addToWatchlist()" style="font-family: Roboto">Add to Watchlist</button>
+        </div>
+
+        <div class="movie">
+            <img src="poster6.jpg">
+            <h3 style="font-family: Roboto">Movie Title 6</h3>
+            <button onclick="playNow()" style="font-family: Roboto">Play Now</button>
+            <button onclick="addToWatchlist()" style="font-family: Roboto">Add to Watchlist</button>
+        </div>
+
+        <div class="movie">
+            <img src="poster7.jpg">
+            <h3>Movie Title 7</h3>
+            <button onclick="playNow()">Play Now</button>
+            <button onclick="addToWatchlist()">Add to Watchlist</button>
+        </div>
+
+        <div class="movie">
+            <img src="poster8.jpg">
+            <h3>Movie Title 8</h3>
+            <button onclick="playNow()">Play Now</button>
+            <button onclick="addToWatchlist()">Add to Watchlist</button>
+        </div>
+
+        <div class="movie">
+            <img src="poster9.jpg">
+            <h3>Movie Title 9</h3>
+            <button onclick="playNow()">Play Now</button>
+            <button onclick="addToWatchlist()">Add to Watchlist</button>
+        </div>
+
+        <div class="movie">
+            <img src="poster10.jpg">
+            <h3>Movie Title 10</h3>
+            <button onclick="playNow()">Play Now</button>
+            <button onclick="addToWatchlist()">Add to Watchlist</button>
+        </div>
+
+        <div class="movie">
+            <img src="poster11.jpg">
+            <h3>Movie Title 11</h3>
+            <button onclick="playNow()">Play Now</button>
+            <button onclick="addToWatchlist()">Add to Watchlist</button>
+					</div>
+      <form>
+  <input type="text" placeholder="Search here!" class="search">
+  <input type="submit" value="Search" class="submit">
+</form>
