@@ -5,31 +5,89 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 	<style>
 	body {
-		margin-left: 300px;
 		background-color: black;
 		color: white;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		min-height: 100vh;
 	}
+
 	h1, h2, h3, h4, h5, h6 {
 		color: white;
 	}
+
 	button {
 		background-color: darkgrey;
 		color: white;
 	}
-</style>
+
+	#popular-movies, #new-releases {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin: 20px;
+	}
+
+	.movie {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin: 10px;
+	}
+
+	.movie img {
+		max-width: 100%;
+		height: auto;
+	}
+
+	form {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		margin: 20px;
+	}
+
+	.search {
+		padding: 10px;
+		margin-right: 10px;
+		flex: 1;
+	}
+
+	.submit {
+		background-color: darkgrey;
+		color: white;
+		padding: 10px;
+		border: none;
+		cursor: pointer;
+	}
+
+	@media only screen and (max-width: 600px) {
+		body {
+			margin: 0;
+		}
+	}
+	</style>
 </head>
 <body>
 	<h1 style="font-family: Roboto">Netflix-like Homepage</h1>
 
-
 	<h2 style="font-family: Roboto">Popular Movies</h2>
 	<div id="popular-movies">
 		<div class="movie">
-			<img src="https://i.postimg.cc/1nn82WDC/secret-invasion.jpg">
-			<h3 style="font-family: Roboto">Secret Invasion</h3>
-			<button onclick="window.location.href='https://disney-clone-27181900.hubspotpagebuilder.eu/title?hs_preview=VFEmDQXl-65018161627&'" style="font-family: Roboto">Play Now</button>
-			<button onclick="addToWatchlist()" style="font-family: Roboto">Add to Watchlist</button>
-		</div>
+	<figure>
+  <img src="https://i.postimg.cc/1nn82WDC/secret-invasion.jpg" width="200" height="300">
+  <figcaption>Secret Invasion</figcaption>
+</figure>
+<button onclick="window.location.href='https://disney-clone-27181900.hubspotpagebuilder.eu/title?hs_preview=VFEmDQXl-65018161627&title=Secret%20Invasion'" style="font-family: Roboto">Play Now</button>
+<button onclick="addToWatchlist()">Add to Watchlist</button>
+<p>Released: 2023</p>
+<p>Genre: Action</p>
+
+</div>
+
 
 		<div class="movie">
 			<h3 style="font-family: Roboto">Extraction 2</h3>
@@ -45,78 +103,152 @@
 		</div>
 	</div>
 
-	<h2 style="font-family: Roboto">New Releases</h2>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Streaming Service</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+	<style>
+		body {
+			margin: 0 auto;
+			max-width: 800px;
+			font-family: Roboto;
+		}
+		
+		h2 {
+			text-align: center;
+		}
+		
+		.movie {
+			display: inline-block;
+			margin: 20px;
+			text-align: center;
+		}
+		
+		img {
+			width: 100%;
+			max-width: 300px;
+		}
+		
+		button {
+			background-color: #4CAF50;
+			border: none;
+			color: white;
+			padding: 10px 20px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 4px 2px;
+			cursor: pointer;
+			border-radius: 5px;
+			font-family: Roboto;
+		}
+		
+		button:hover {
+			background-color: #3e8e41;
+		}
+		
+		input[type=text], select {
+			width: 100%;
+			padding: 12px 20px;
+			margin: 8px 0;
+			display: inline-block;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			box-sizing: border-box;
+			font-family: Roboto;
+		}
+		
+		input[type=submit] {
+			width: 100%;
+			background-color: #4CAF50;
+			color: white;
+			padding: 14px 20px;
+			margin: 8px 0;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+			font-family: Roboto;
+		}
+		
+		input[type=submit]:hover {
+			background-color: #45a049;
+		}
+		
+		form {
+			border-radius: 5px;
+			background-color: #f2f2f2;
+			padding: 20px;
+		}
+		
+		/* Default styles */
+		body {
+			margin-left: 300px;
+		}
+		
+		/* Media query for smaller screens */
+		@media only screen and (max-width: 600px) {
+			body {
+				margin-left: 0;
+			}
+		}
+	</style>
+</head>
+<body>
+	<h2>New Releases</h2>
 	<div id="new-releases">
-        <div class="movie">
-            <img src="poster4.jpg">
-            <h3 style="font-family: Roboto">Movie Title 4</h3>
-            <button onclick="window.alert('This movie is not available at the moment.')" style="font-family: Roboto">Play Now</button>
-            <button onclick="addToWatchlist()" style="font-family: Roboto">Add to Watchlist</button>
-        </div>
+		<div class="movie">
+			<img src="poster1.jpg">
+			<h3>Movie Title 1</h3>
+			<button onclick="window.alert('This movie is not available at the moment.')">Play Now</button>
+			<button onclick="addToWatchlist()">Add to Watchlist</button>
+		</div>
+		
+		<div class="movie">
+			<img src="poster2.jpg">
+			<h3>Movie Title 2</h3>
+			<button onclick="window.alert('This movie is not available at the moment.')">Play Now</button>
+			<button onclick="addToWatchlist()">Add to Watchlist</button>
+		</div>
+      	<div class="movie">
+		<img src="poster3.jpg">
+		<h3>Movie Title 3</h3>
+		<button onclick="window.alert('This movie is not available at the moment.')">Play Now</button>
+		<button onclick="addToWatchlist()">Add to Watchlist</button>
+	</div>
+</div>
 
-        <div class="movie">
-            <img src="poster5.jpg">
-            <h3 style="font-family: Roboto">Movie Title 5</h3>
-            <button onclick="window.alert('This movie is not available at the moment.')" style="font-family: Roboto">Play Now</button>
-            <button onclick="addToWatchlist()" style="font-family: Roboto">Add to Watchlist</button>
-        </div>
-
-        <div class="movie">
-            <img src="poster6.jpg">
-            <h3 style="font-family: Roboto">Movie Title 6</h3>
-            <button onclick="window.alert('This movie is not available at the moment.')" style="font-family: Roboto">Play Now</button>
-            <button onclick="addToWatchlist()" style="font-family: Roboto">Add to Watchlist</button>
-        </div>
-
-        <div class="movie">
-            <img src="poster7.jpg">
-          <h3 style="font-family: Roboto">Movie Title 7</h3>
-            <button onclick="playNow()">Play Now</button>
-            <button onclick="addToWatchlist()">Add to Watchlist</button>
-        </div>
-
-        <div class="movie">
-            <img src="poster8.jpg">
-            <h3>Movie Title 8</h3>
-            <button onclick="playNow()">Play Now</button>
-            <button onclick="addToWatchlist()">Add to Watchlist</button>
-        </div>
-
-        <div class="movie">
-            <img src="poster9.jpg">
-            <h3>Movie Title 9</h3>
-            <button onclick="playNow()">Play Now</button>
-            <button onclick="addToWatchlist()">Add to Watchlist</button>
-        </div>
-
-        <div class="movie">
-            <img src="poster10.jpg">
-            <h3>Movie Title 10</h3>
-            <button onclick="playNow()">Play Now</button>
-            <button onclick="addToWatchlist()">Add to Watchlist</button>
-        </div>
-
-        <div class="movie">
-            <img src="poster11.jpg">
-            <h3>Movie Title 11</h3>
-            <button onclick="playNow()">Play Now</button>
-            <button onclick="addToWatchlist()">Add to Watchlist</button>
-					</div>
-      <form>
-  <input type="text" placeholder="Search here!" class="search">
-  <input type="submit" value="Search" class="submit">
+<h2>Add Movie to Watchlist</h2>
+<form id="watchlist-form">
+	<label for="movie-title">Movie Title</label>
+	<input type="text" id="movie-title" name="movie-title" placeholder="Enter movie title...">
+	
+	<label for="movie-year">Year Released</label>
+	<input type="text" id="movie-year" name="movie-year" placeholder="Enter year released...">
+	
+	<label for="movie-genre">Genre</label>
+	<select id="movie-genre" name="movie-genre">
+		<option value="">Select genre...</option>
+		<option value="action">Action</option>
+		<option value="comedy">Comedy</option>
+		<option value="drama">Drama</option>
+		<option value="horror">Horror</option>
+	</select>
+	
+	<input type="submit" value="Add to Watchlist">
 </form>
-      
-<style>
-	/* Default styles */
-	body {
-		margin-left: 300px;
+
+<script>
+	function addToWatchlist() {
+		alert("Added to watchlist!");
 	}
 	
-	/* Media query for smaller screens */
-	@media only screen and (max-width: 600px) {
-		body {
-			margin-left: 0;
-		}
-	}
-</style>
+	document.getElementById("watchlist-form").addEventListener("submit", function(event) {
+		event.preventDefault();
+		var title = document.getElementById("movie-title").value;
+		var year = document.getElementById("movie-year").value;
+		var genre = document.getElementById("movie-genre").value;
+		alert("Added " + title + " (" + year + ") to watchlist under the " + genre + " genre.");
+	});
+</script>
