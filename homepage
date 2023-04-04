@@ -3,14 +3,29 @@
 <head>
 	<title>Netflix-like Homepage</title>
 	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+	<style>
+	body {
+		margin-left: 300px;
+		background-color: black;
+		color: white;
+	}
+	h1, h2, h3, h4, h5, h6 {
+		color: white;
+	}
+	button {
+		background-color: darkgrey;
+		color: white;
+	}
+</style>
 </head>
 <body>
 	<h1 style="font-family: Roboto">Netflix-like Homepage</h1>
 
+
 	<h2 style="font-family: Roboto">Popular Movies</h2>
 	<div id="popular-movies">
 		<div class="movie">
-			<img img="https://postimg.cc/1nn82WDC">
+			<img src="https://i.postimg.cc/1nn82WDC/secret-invasion.jpg">
 			<h3 style="font-family: Roboto">Secret Invasion</h3>
 			<button onclick="window.location.href='https://disney-clone-27181900.hubspotpagebuilder.eu/title?hs_preview=VFEmDQXl-65018161627&'" style="font-family: Roboto">Play Now</button>
 			<button onclick="addToWatchlist()" style="font-family: Roboto">Add to Watchlist</button>
@@ -18,14 +33,14 @@
 
 		<div class="movie">
 			<h3 style="font-family: Roboto">Extraction 2</h3>
-			<button on click="window.location.href='https://youtu.be/mO0OuR26IZM'" style="font-family: Roboto">Play Now</button>			
+			<button onclick="window.location.href='https://youtu.be/mO0OuR26IZM'" style="font-family: Roboto">Play Now</button>
 			<button onclick="addToWatchlist()" style="font-family: Roboto">Add to Watchlist</button>
 		</div>
 
 		<div class="movie">
 			<img src="poster3.jpg">
 			<h3 style="font-family: Roboto">Movie Title 3</h3>
-			<button onclick="playNow()" style="font-family: Roboto">Play Now</button>
+			<button onclick="window.alert('This movie is not available at the moment.')" style="font-family: Roboto">Play Now</button>
 			<button onclick="addToWatchlist()" style="font-family: Roboto">Add to Watchlist</button>
 		</div>
 	</div>
@@ -35,27 +50,27 @@
         <div class="movie">
             <img src="poster4.jpg">
             <h3 style="font-family: Roboto">Movie Title 4</h3>
-            <button onclick="playNow()" style="font-family: Roboto">Play Now</button>
+            <button onclick="window.alert('This movie is not available at the moment.')" style="font-family: Roboto">Play Now</button>
             <button onclick="addToWatchlist()" style="font-family: Roboto">Add to Watchlist</button>
         </div>
 
         <div class="movie">
             <img src="poster5.jpg">
             <h3 style="font-family: Roboto">Movie Title 5</h3>
-            <button onclick="playNow()" style="font-family: Roboto">Play Now</button>
+            <button onclick="window.alert('This movie is not available at the moment.')" style="font-family: Roboto">Play Now</button>
             <button onclick="addToWatchlist()" style="font-family: Roboto">Add to Watchlist</button>
         </div>
 
         <div class="movie">
             <img src="poster6.jpg">
             <h3 style="font-family: Roboto">Movie Title 6</h3>
-            <button onclick="playNow()" style="font-family: Roboto">Play Now</button>
+            <button onclick="window.alert('This movie is not available at the moment.')" style="font-family: Roboto">Play Now</button>
             <button onclick="addToWatchlist()" style="font-family: Roboto">Add to Watchlist</button>
         </div>
 
         <div class="movie">
             <img src="poster7.jpg">
-            <h3>Movie Title 7</h3>
+          <h3 style="font-family: Roboto">Movie Title 7</h3>
             <button onclick="playNow()">Play Now</button>
             <button onclick="addToWatchlist()">Add to Watchlist</button>
         </div>
@@ -91,3 +106,17 @@
   <input type="text" placeholder="Search here!" class="search">
   <input type="submit" value="Search" class="submit">
 </form>
+      
+<style>
+	/* Default styles */
+	body {
+		margin-left: 300px;
+	}
+	
+	/* Media query for smaller screens */
+	@media only screen and (max-width: 600px) {
+		body {
+			margin-left: 0;
+		}
+	}
+</style>
