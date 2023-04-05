@@ -5,74 +5,86 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 	<style>
 	body {
+	background-color: white;
+	color: black;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+}
+
+@media (prefers-color-scheme: dark) {
+	body {
 		background-color: black;
 		color: white;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		min-height: 100vh;
 	}
+}
 
-	h1, h2, h3, h4, h5, h6 {
-		color: white;
-	}
+h1, h2, h3, h4, h5, h6 {
+	color: inherit;
+}
 
-	button {
-		background-color: darkgrey;
-		color: white;
-	}
+button {
+	background-color: grey;
+	color: inherit;
+}
 
-	#popular-movies, #new-releases {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		margin: 20px;
-	}
+#popular-movies, #new-releases {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 20px;
+}
 
-	.movie {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		margin: 10px;
-	}
+.movie {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 10px;
+}
 
-	.movie img {
-		max-width: 100%;
-		height: auto;
-	}
+.movie img {
+	max-width: 100%;
+	height: auto;
+}
 
-	form {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: center;
-		margin: 20px;
-	}
+form {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	margin: 20px;
+}
 
-	.search {
-		padding: 10px;
-		margin-right: 10px;
-		flex: 1;
-	}
+.search {
+	padding: 10px !important;
+	margin-right: 10px;
+	flex: 1;
+}
 
-	.submit {
-		background-color: darkgrey;
-		color: white;
-		padding: 10px;
-		border: none;
-		cursor: pointer;
-	}
+.submit {
+	background-color: grey !important;
+	color: inherit;
+	padding: 10px;
+	border: none;
+	cursor: pointer;
+}
 
-	@media only screen and (max-width: 600px) {
-		body {
-			margin: 0;
-		}
+@media only screen and (max-width: 600px) {
+	body {
+		margin: 0;
 	}
-	</style>
+}
+
+</style>
 </head>
 <body>
 	<h1 style="font-family: Roboto">Netflix-like Homepage</h1>
+  <form onsubmit="searchMovies(); return false;">
+	<input type="text" id="search-bar" class="search" placeholder="Search movies...">
+	<input type="submit" value="Search" class="submit">
+</form>
 
 	<h2 style="font-family: Roboto">Popular Movies</h2>
 	<div id="popular-movies">
@@ -252,3 +264,5 @@
 		alert("Added " + title + " (" + year + ") to watchlist under the " + genre + " genre.");
 	});
 </script>
+
+
