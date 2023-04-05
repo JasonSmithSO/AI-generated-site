@@ -4,106 +4,285 @@
 	<title>NeuralWeb</title>
 	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 	<style>
-
-	h1, h2, h3, h4, h5, h6 {
-		color: inherit;
-	}
-
-	button {
-		background-color: grey;
-		color: inherit;
-	}
-
-	#popular-movies, #new-releases {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		margin: 20px;
-	}
-
-	.movie {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		margin: 10px;
-	}
-
-	.movie img {
-		max-width: 100%;
-		height: auto;
-	}
-
-	form {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: center;
-		margin: 20px;
-	}
-
-	.search {
-		padding: 10px !important;
-		margin-right: 10px;
-		flex: 1;
-	}
-
-	.submit {
-		background-color: grey !important;
-		color: inherit;
-		padding: 10px;
-		border: none;
-		cursor: pointer;
-	}
-
-	/* Media query for smaller screens */
-		@media only screen and (max-width: 600px) {
-			body {
-				margin-left: 0;
-
+		body {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			font-family: Roboto;
+			margin: 0;
+			padding: 0;
+			height: 100%;
 		}
-	}
 
+		.container {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: center;
+			max-width: 800px;
+			width: 100%;
+			padding: 20px;
+		}
+
+		h1 {
+			font-size: 3em;
+			text-align: center;
+			resize: horizontal;
+			max-width: 100%;
+		}
+
+		h2 {
+			text-align: center;
+			margin: 20px 0;
+			width: 100%;
+			max-width: 100%;
+		}
+
+		.movie {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin: 20px;
+			text-align: center;
+			width: 100%;
+			max-width: 300px;
+		}
+
+		img {
+			width: 100%;
+			max-width: 300px;
+		}
+
+		button {
+			background-color: #4CAF50;
+			border: none;
+			color: white;
+			padding: 10px 20px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 4px 2px;
+			cursor: pointer;
+			width: 100%;
+			max-width: 300px;
+		}
+
+		select {
+			width: 100%;
+			max-width: 300px;
+			padding: 10px;
+			margin: 20px 0;
+			border-radius: 5px;
+			border: none;
+			background-color: #f2f2f2;
+		}
+
+		input[type="text"] {
+			width: 100%;
+			max-width: 300px;
+			padding: 10px;
+			margin: 20px 0;
+			border-radius: 5px;
+			border: none;
+			background-color: #f2f2f2;
+		}
+
+		input[type="submit"] {
+			background-color: #4CAF50;
+			border: none;
+			color: white;
+			padding: 10px 20px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 4px 2px;
+			cursor: pointer;
+			border-radius: 5px;
+		}
 	</style>
 </head>
 <body>
-	<!-- Sidebar content -->
-	<div class="sidebar">
-		<a href="#">Home</a>
-		<a href="#">Popular Movies</a>
-		<a href="#">New Releases</a>
-		<a href="#">My Watchlist</a>
-	</div>
+	<div class="container">
+		<!-- Sidebar content -->
+		<div class="sidebar">
+			<a href="#">Home</a>
+			<a href="#">Popular Movies</a>
+			<a href="#">New Releases</a>
+			<a href="#">My Watchlist</a>
+		</div>
 
-	<!-- Main content -->
-	<h1 style="font-family: Roboto">NeuralWeb</h1>
-	<form onsubmit="searchMovies(); return false;">
-		<input type="text" id="search-bar" class="search" placeholder="Search movies...">
-		<input type="submit" value="Search" class="submit">
-	</form>
+		<!-- Main content -->
+		<h1>NeuralWeb</h1>
+		<form onsubmit="searchMovies(); return false;">
+			<input type="text" id="search-bar" class="search" placeholder="Search movies...">
+			<input type="submit" value="Search" class="submit">
+
+<!-- Watchlist content -->
+<div id="watchlist">
+	<h2 style="font-family: Roboto">My Watchlist</h2>
+	<div id="watchlist-movies"></div>
+	<button onclick="clearWatchlist()" style="font-family: Roboto">Clear Watchlist</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html> 
+<!-- Script to handle functionality -->
+<script>
+	function searchMovies() {
+		// Code to search for movies
+	}
+
+	function filterMovies() {
+		// Code to filter movies by genre
+	}
+
+	function addToWatchlist() {
+		// Code to add a movie to the watchlist
+	}
+
+	function removeFromWatchlist() {
+		// Code to remove a movie from the watchlist
+	}
+
+	function clearWatchlist() {
+		// Code to clear the watchlist
+	}
+</script> 
+<style>
+	body {
+		margin: 0 auto;
+		max-width: 800px;
+		font-family: Roboto;
+		display: flex; /* use flexbox for layout */
+		flex-direction: column; /* stack elements vertically */
+		align-items: center; /* center elements horizontally */
+		justify-content: center; /* center elements vertically */
+		text-align: center; /* center text */
+	}
+
+	.sidebar {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-top: 20px;
+	}
+
+	.sidebar a {
+		display: block;
+		margin-bottom: 10px;
+		padding: 10px;
+		background-color: #f1f1f1;
+		border-radius: 5px;
+	}
+
+	.sidebar a:hover {
+		background-color: #ddd;
+	}
+
+	.search {
+		width: 50%;
+		padding: 10px;
+		border-radius: 5px;
+		border: none;
+		margin: 20px 0;
+	}
+
+	.submit {
+		background-color: #4CAF50;
+		color: white;
+		border: none;
+		padding: 10px 20px;
+		border-radius: 5px;
+		margin-left: 10px;
+		cursor: pointer;
+	}
+
+	select {
+		padding: 10px;
+		border-radius: 5px;
+		border: none;
+		margin: 20px 0;
+	}
+
+	select option {
+		background-color: #f1f1f1;
+	}
+
+	select option:hover {
+		background-color: #ddd;
+	}
+
+	h1 {
+		font-size: 3em;
+		resize: horizontal;
+		display: inline-block;
+		width: 100%;
+		max-width: 800px;
+		margin-bottom: 20px;
+	}
+
+	h2 {
+		font-size: 2em;
+		margin-top: 50px;
+		margin-bottom: 20px;
+	}
+
+	.movie {
+		margin-bottom: 50px;
+	}
+
+	img {
+		max-width: 100%;
+	}
+
+	button {
+		margin: 10px;
+	}
+
+	#watchlist {
+		display: none;
+	}
+
+	#watchlist h2 {
+		margin-top: 0;
+	}
+
+	#watchlist button {
+		margin-top: 20px;
+	}
+</style>
+
+	<h2 style="font-family: Roboto">Filter by Genre</h2>
+	<select id="genre-select" onchange="filterMovies()">
+		<option value="">All Genres</option>
+		<option value="action">Action</option>
+		<option value="comedy">Comedy</option>
+		<option value="drama">Drama</option>
+	</select>
 
 	<h2 style="font-family: Roboto">Popular Movies</h2>
 	<div id="popular-movies">
-		<div class="movie">
+		<div class="movie" data-genre="action">
 			<figure>
 				<img src="https://i.postimg.cc/1nn82WDC/secret-invasion.jpg" width="200" height="300">
 				<figcaption>Secret Invasion</figcaption>
 			</figure>
-<button onclick="window.location.href='https://disney-clone-27181900.hubspotpagebuilder.eu/title?hs_preview=VFEmDQXl-65018161627&title=Secret%20Invasion'" style="font-family: Roboto">Play Now</button>
-<button onclick="addToWatchlist()">Add to Watchlist</button>
-<p>Released: 2023</p>
-<p>Genre: Action</p>
-
-</div>
-
-
+			<button onclick="window.location.href='https://disney-clone-27181900.hubspotpagebuilder.eu/title?hs_preview=VFEmDQXl-65018161627&title=Secret%20Invasion'" style="font-family: Roboto">Play Now</button>
+			<button onclick="addToWatchlist()">Add to Watchlist</button>
+			<h3 style="font-family: Roboto; font-weight: bold;">Secret Invasion</h3>
+			<p>Released: 2023</p>
+			<p>Genre: Action</p>
+		</div>
 		<div class="movie">
 	<img src="https://www.themoviedb.org/t/p/original/axiZx52U5J8m8LiMIxnk5euWLG0.jpg" alt="Extraction 2 Poster">
 	<h3 style="font-family: Roboto">Extraction 2</h3>
 	<button onclick="window.location.href='https://youtu.be/mO0OuR26IZM'" style="font-family: Roboto">Play Now</button>
 	<button onclick="addToWatchlist()" style="font-family: Roboto">Add to Watchlist</button>
 </div>
-
-
 		<div class="movie">
 			<img src="poster3.jpg">
 			<h3 style="font-family: Roboto">Movie Title 3</h3>
@@ -347,3 +526,4 @@ document.addEventListener('mousemove', function(event) {
 		alert("Added " + title + " (" + year + ") to watchlist under the " + genre + " genre.");
 	});
 </script>
+
