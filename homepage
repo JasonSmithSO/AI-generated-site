@@ -2,8 +2,13 @@
 <html>
 <head>
 	<title>NeuralWeb</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 	<style>
+		body {
+			font-family: Roboto;
+		}
+
 		/* Common styles for both light and dark modes */
 		h1, h2, h3, h4, h5, h6 {
 			color: inherit;
@@ -29,30 +34,8 @@
 		}
 
 		.movie img {
-			max-width: 100%;
+			max-width: 200px;
 			height: auto;
-		}
-
-		form {
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			justify-content: center;
-			margin: 20px;
-		}
-
-		.search {
-			padding: 10px !important;
-			margin-right: 10px;
-			flex: 1;
-		}
-
-		.submit {
-			background-color: grey !important;
-			color: inherit;
-			padding: 10px;
-			border: none;
-			cursor: pointer;
 		}
 
 		/* Light mode */
@@ -82,9 +65,14 @@
 		/* Media query for smaller screens */
 		@media only screen and (max-width: 600px) {
 			body {
-				margin-left: 0;
+				margin: 0;
 			}
-			
+
+			/* Sidebar */
+			.sidebar {
+				display: none;
+			}
+
 			/* Bottom bar */
 			.bottom-bar {
 				display: flex;
@@ -97,7 +85,7 @@
 				bottom: 0;
 				width: 100%;
 			}
-			
+
 			.bottom-bar img {
 				height: 40px;
 			}
@@ -114,67 +102,55 @@
 	</div>
 
 	<!-- Main content -->
-	<h1 style="font-family: Roboto">NeuralWeb</h1>
-	<form onsubmit="searchMovies(); return false;">
-		<input type="text" id="search-bar" class="search" placeholder="Search movies...">
-		<input type="submit" value="Search" class="submit">
-	</form>
-
-	<h2 style="font-family: Roboto">Popular Movies</h2>
+	<h1>NeuralWeb</h1>
 	<div id="popular-movies">
+		<!-- Popular movies -->
 		<div class="movie">
-			<figure>
-				<img src="https://i.postimg.cc/1nn82WDC/secret-invasion.jpg" width="200" height="300">
-				<figcaption>Secret Invasion</figcaption>
-			</figure>
-			<button onclick="window.location.href='https://disney-clone-27181900.hubspotpagebuilder.eu/title?hs_preview=VFEmDQXl-65018161627&title=Secret%20Invasion'" style="font-family: Roboto">Play Now</button>
-			<button onclick="addToWatchlist()">Add to Watchlist</button>
-			<p>Released: 2023</p>
-			<p>Genre: Action</p>
+		  <a href="https://disney-clone-27181900.hubspotpagebuilder.eu/title?hs_preview=VFEmDQXl-65018161627&amp;title=Secret%20Invasion" target="_blank">
+		  	<img src="https://www.themoviedb.org/t/p/original/oApCVZoOABbYBsR9H3Mxt04Y1ef.jpg" alt="Secret Invasion">
+		  	<div class="poster-overlay"></div>
+		  </a>
+		  <h3>Secret Invasion</h3>
+		  <button>Add to Watchlist</button>
 		</div>
-
-		<div class="movie">
-			<img src="https://www.themoviedb.org/t/p/original/axiZx52U5J8m8LiMIxnk5euWLG0.jpg" alt="Extraction 2 Poster">
-			<h3 style="font-family: Roboto">Extraction 2</h3>
-			<button onclick="window.location.href='https://youtu.be/mO0OuR26IZM'" style="font-family: Roboto">Play Now</button>
-			<button onclick="addToWatchlist()" style="font-family: Roboto">Add to Watchlist</button>
-<p>Released: 2022</p>
-<p>Genre: Action, Thriller</p>
+<div class="movie">
+<img src="https://via.placeholder.com/200x300?text=Movie+2" alt="Movie 2">
+<h3>Movie 2</h3>
+</div>
+<div class="movie">
+<img src="https://via.placeholder.com/200x300?text=Movie+3" alt="Movie 3">
+<h3>Movie 3</h3>
+</div>
+<div class="movie">
+<img src="https://via.placeholder.com/200x300?text=Movie+4" alt="Movie 4">
+<h3>Movie 4</h3>
 </div>
 </div>
-  
-  <h2 style="font-family: Roboto">New Releases</h2>
 <div id="new-releases">
-	<div class="movie">
-		<img src="https://www.themoviedb.org/t/p/original/btTdmkgIvOi0FFip1sPuZI2oQG6.jpg" alt="No Time to Die Poster">
-		<h3 style="font-family: Roboto">No Time to Die</h3>
-		<button onclick="window.location.href='https://youtu.be/vw2FOYjCz38'" style="font-family: Roboto">Play Now</button>
-		<button onclick="addToWatchlist()" style="font-family: Roboto">Add to Watchlist</button>
-		<p>Released: 2021</p>
-		<p>Genre: Action, Adventure, Thriller</p>
-	</div>
-
-	<div class="movie">
-		<img src="https://www.themoviedb.org/t/p/original/hRMfgGFRAZIlvwVWy8DYJdLTpvN.jpg" alt="The Suicide Squad Poster">
-		<h3 style="font-family: Roboto">The Suicide Squad</h3>
-		<button onclick="window.location.href='https://youtu.be/jPZzUTGkgxw'" style="font-family: Roboto">Play Now</button>
-		<button onclick="addToWatchlist()" style="font-family: Roboto">Add to Watchlist</button>
-		<p>Released: 2021</p>
-		<p>Genre: Action, Adventure, Comedy</p>
-	</div>
+<!-- New releases -->
+<div class="movie">
+<img src="https://via.placeholder.com/200x300?text=Movie+5" alt="Movie 5">
+<h3>Movie 5</h3>
+</div>
+<div class="movie">
+<img src="https://via.placeholder.com/200x300?text=Movie+6" alt="Movie 6">
+<h3>Movie 6</h3>
+</div>
+<div class="movie">
+<img src="https://via.placeholder.com/200x300?text=Movie+7" alt="Movie 7">
+<h3>Movie 7</h3>
+</div>
+<div class="movie">
+<img src="https://via.placeholder.com/200x300?text=Movie+8" alt="Movie 8">
+<h3>Movie 8</h3>
+</div>
+</div>
+<!-- Bottom bar -->
+<div class="bottom-bar">
+<img src="https://via.placeholder.com/40x40?text=Icon+1" alt="Icon 1">
+<img src="https://via.placeholder.com/40x40?text=Icon+2" alt="Icon 2">
+<img src="https://via.placeholder.com/40x40?text=Icon+3" alt="Icon 3">
 </div>
 
-<script>
-	// Add movie to watchlist function
-	function addToWatchlist() {
-		alert("Added to Watchlist!");
-	}
-
-	// Search movies function
-	function searchMovies() {
-		let searchTerm = document.getElementById("search-bar").value;
-		alert("Searching for: " + searchTerm);
-	}
-</script>
 </body>
 </html>
